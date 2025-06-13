@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(image/Register\ bg.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-size: cover;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #000;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: rgba(200, 200, 200, 0.6);
+        }
+
+        .signup-container {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            position: relative;
+            padding: 60px 35px 30px 35px;
+            height: 80%;
+            width: 500px;
+            background-color: rgba(255, 220, 220, 0.4);
+            border-radius: 30px;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+
+        }
+
+        .signup-container::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: xx-large;
+        }
+
+        .signup-container form {
+            text-align: center;
+
+
+        }
+
+        .signup-container img {
+            text-align: center;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 100%;
+            height: auto;
+            padding: 12px;
+            margin: 10px 0 18px;
+            font-size: medium;
+        }
+
+        .signup-container .profile-pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+
+        }
+
+        .signup-container .profile-pic input[type="file"] {
+
+
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            opacity: 0;
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+
+        }
+
+        .signup-container .profile-pic img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .signup-container .profile-pic img:hover {
+            opacity: 0.8;
+        }
+
+        .input-field {
+            margin: 12px 0;
+            position: relative;
+
+        }
+
+
+
+        input[type="profile"],
+        input[type="text"],
+        input[type="email"],
+        input[type="DATE"],
+        input[type="password"] {
+            width: 90%;
+            height: 30px;
+            color: #c12828;
+            border: none;
+            border-radius: 10px;
+            background: rgba(224, 223, 223, 0.6);
+            backdrop-filter: blur(2px);
+            outline: none;
+            padding: 12px;
+            margin: 10px 0 18px;
+            font-size: 15px;
+            ;
+        }
+
+
+        .eye-area {
+            position: absolute;
+            top: 91.5%;
+            right: 13%;
+        }
+
+        .eye-area-2 {
+            position: absolute;
+            top: 102%;
+            right: 13%;
+        }
+
+        .eye-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        i {
+            position: absolute;
+            color: #444444;
+            cursor: pointer;
+        }
+
+        #eye,
+        #eye-2 {
+            opacity: 1;
+        }
+
+        #eye-slash,
+        #eye-slash-2 {
+            opacity: 0;
+        }
+
+        button {
+            width: 50%;
+            padding: 12px;
+            margin-top: 25px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .signup-container a i {
+            position: fixed;
+            border: 2px solid rgb(0, 0, 0);
+            border-radius: 100%;
+            text-align: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            top: 3%;
+            left: 93%;
+            color: black;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+
+        <div class="signup-container">
+            <a href="login.html" class="back-button">
+                &#8592; Back
+            </a>
+            <h2>Create Account</h2>
+            <form id="signupForm" action="registerr.php" method="POST">
+                <div class="profile-pic">
+                    <img src="image/profile.png" alt="">
+                    <input type="file" name="profile_picture" required />
+                </div>
+                <input type="text" name="first_name" placeholder="First Name" required />
+                <input type="text" name="last_name" placeholder="last Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+                <input type="date" name="dob" placeholder="Date Of Birth" required />
+                <input type="text" name="phone_number" placeholder="Contact Number" required />
+                <input type="password" name="password" id="password" placeholder="Password" required />
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+                <div class="error" id="errorMsg"></div>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+
+        <script>
+            document.getElementById("signupForm").addEventListener("submit", function (e) {
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirmPassword").value;
+                const errorMsg = document.getElementById("errorMsg");
+
+                if (password !== confirmPassword) {
+                    e.preventDefault();
+                    errorMsg.textContent = "Passwords do not match.";
+                } else if (password.length < 6) {
+                    e.preventDefault();
+                    errorMsg.textContent = "Password must be at least 6 characters.";
+                } else {
+                    errorMsg.textContent = "";
+                }
+            });
+        </script>
+    </body>
+
+</html>

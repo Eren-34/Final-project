@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="sstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <div class="Login">
+        <div class="container-1">
+            <img class="black-bg " src="image/black bg.jpg" alt="">
+            <img class="logo" src="image/logo.png" alt="" srcset="">
+            <h3>Login with Social media and <br>get quick access</h3>
+            <div class="btn-login-with">
+                <button class="btn-4">Log in with Google</button>
+                <button class="btn-4">Log in with FaceBook</button>
+                <button class="btn-4">Log in with APPLE</button>
+            </div>
+        </div>
+        <div class="container-2">
+            <form method="post" action="login.php" class="box">
+                <div class="box-login" id="login">
+                    <div class="top-header">
+                        <h3>Hello, Again</h3>
+                        <small>We are happy to have you back.</small>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-field">
+                            <input type="text" class="input-box" id="logEmail" name="email" required>
+                            <label for="logEmail">Email address</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="password" class="input-box" id="logPassword" name="password" required>
+                            <label for="logPassword">Password</label>
+                            <div class="eye-area">
+                                <div class="eye-box" onclick="togglePassword()">
+                                    <i class="fa-regular fa-eye" id="eye"></i>
+                                    <i class="fa-regular fa-eye-slash" id="eye-slash" style="display:none;"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="remember">
+                            <input type="checkbox" id="formCheck" class="check">
+                            <label for="formCheck">Remember Me</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="submit" class="input-submit" value="Sign In">
+                        </div>
+
+                        <div class="forgot">
+                            <a href="#">Forgot password?</a>
+                        </div>
+
+                        <div class="Register">
+                            <span>Don't have an account? <a href="register.html">Register here</a></span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    function togglePassword() {
+        const pwd = document.getElementById('logPassword');
+        const eye = document.getElementById('eye');
+        const eyeSlash = document.getElementById('eye-slash');
+        if (pwd.type === 'password') {
+            pwd.type = 'text';
+            eye.style.display = 'none';
+            eyeSlash.style.display = 'inline';
+        } else {
+            pwd.type = 'password';
+            eye.style.display = 'inline';
+            eyeSlash.style.display = 'none';
+        }
+    }
+</script>
+
+</html>
