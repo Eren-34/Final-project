@@ -11,7 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Please fill all fields.";
         exit;
     }
-
     // Query to get user by email
     $sql = "SELECT * FROM Recipient WHERE Email = '$email'";
     $result = mysqli_query($conn, $sql);
@@ -38,3 +37,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     mysqli_close($conn);
 }
 ?>
+bvhm<!DOCTYPE html>
